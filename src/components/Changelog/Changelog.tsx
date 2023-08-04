@@ -22,9 +22,10 @@ const getLabelClassName = (label: Log['label']): string => {
 export interface ChangelogProps {
   date: string;
   logs: Log[];
+  showTickets?: boolean;
 }
 
-const Changelog: React.FC<ChangelogProps> = ({ date, logs }) => {
+const Changelog: React.FC<ChangelogProps> = ({ date, logs, showTickets }) => {
   return (
     <div className={styles.wrapper}>
       <h2>{date}</h2>
@@ -38,7 +39,15 @@ const Changelog: React.FC<ChangelogProps> = ({ date, logs }) => {
           </div>
           <div>
             {l.text}{' '}
-            {l.ticket && <span className={styles.ticket}>{l.ticket}</span>}
+            {showTickets && l.ticket && (
+              <a
+                href={`https://trueimpact.atlassian.net/browse/${l.ticket}`}
+                target="_blank"
+                className={styles.ticket}
+              >
+                {l.ticket}
+              </a>
+            )}
           </div>
         </div>
       ))}
