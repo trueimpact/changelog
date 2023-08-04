@@ -8,6 +8,10 @@
   margin-bottom: 18px;
 }
 
+.ticket {
+  color: var(--label-ticket);
+}
+
 .label {
   padding: 4px 16px;
   margin-right: 16px;

@@ -43,6 +43,7 @@
   --label-fixed: #0073a3;
   --label-improved: #ff8300;
   --label-new: #219653;
+  --label-ticket: #445769;
 }
 
 @media (prefers-color-scheme: dark) {

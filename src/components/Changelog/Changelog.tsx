@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Changelog.module.css';
 
 interface Log {
+  ticket?: string;
   text: React.ReactNode;
   label: 'New' | 'Improved' | 'Fixed';
 }
@@ -35,7 +36,10 @@ const Changelog: React.FC<ChangelogProps> = ({ date, logs }) => {
           <div className={`${styles.label} ${getLabelClassName(l.label)}`}>
             {l.label}
           </div>
-          <div>{l.text}</div>
+          <div>
+            {l.text}{' '}
+            {l.ticket && <span className={styles.ticket}>{l.ticket}</span>}
+          </div>
         </div>
       ))}
     </div>
