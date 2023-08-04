@@ -3,6 +3,18 @@
   margin: 0 auto;
 }
 
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  border-radius: 100%;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+}
+
 .code {
   font-weight: 700;
   font-family: var(--font-mono);
