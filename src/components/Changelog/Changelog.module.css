@@ -1,0 +1,29 @@
+.wrapper {
+  margin-bottom: 32px;
+}
+
+.log {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.label {
+  padding: 4px 16px;
+  margin-right: 16px;
+  border-radius: 30px;
+  min-width: 103px;
+  text-align: center;
+}
+
+.new {
+  background-color: var(--label-new);
+}
+
+.improved {
+  background-color: var(--label-improved);
+}
+
+.fixed {
+  background-color: var(--label-fixed);
+}
