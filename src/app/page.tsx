@@ -1,9 +1,9 @@
 'use client';
-import Image from 'next/image';
 import styles from './page.module.css';
 import Changelog from '@/components/Changelog/Changelog';
 import { changelogs } from './data';
 import { useSearchParams } from 'next/navigation';
+import { Checkmark } from '@/components/icons';
 
 export default function Home() {
   const router = useSearchParams();
@@ -15,14 +15,9 @@ export default function Home() {
         <>
           <h1>Status</h1>
           <div className={styles.status}>
-            <Image
-              width={25}
-              height={25}
-              src="/circle-check-solid.svg"
-              alt="Checkmark"
-              title="Checkmark"
-              className={styles.icon}
-            />
+            <div>
+              <Checkmark className={styles.icon} />
+            </div>
             No incidents were reported at this time. All systems are
             operational.
           </div>
